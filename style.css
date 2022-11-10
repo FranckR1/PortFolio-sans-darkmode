@@ -1,0 +1,173 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+/* Variables */
+:root {
+    --c-brand-rgb: 248, 54, 145;
+    --c-dark: #303050;
+    --c-body: #636383;
+    --c-light: #f6f6f6;
+    --c-Blue:  #0d6efd;
+    --f-main: "Bai Jamjuree", sans-serif;
+    --transition: all .4s cubic-bezier(.165, .84, .44, 1);
+    --shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Helpers */
+body {
+    font-family: var(--f-main);
+    color: var(--c-body);
+    line-height: 1.7;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+/* Navbar */
+.navbar {
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.navbar-toggler {
+    border-radius: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+.navbar .navbar-nav .nav-link {
+    font-weight: 700;
+    color: var(--c-dark);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active  {
+    color: var(--c-brand);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--c-dark);
+}
+/* Btn */
+.btn {
+    padding: 10px 24px;
+    border-radius: 0;
+    border-width: 2px;
+    font-weight: 500;
+}
+
+.btn-brand,
+.btn-brand:focus {
+    background-color: var(--c-Blue);
+    color: white;
+    border-color: var(--c-Blue);
+}
+
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--c-brand);
+    border-color: var(--c-brand);
+}
+.submit-btn {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .theme-btn {
+    top: 5%;
+    right: 3%;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-grey-4);
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease-in-out;
+  }
+  .theme-btn:active {
+    transform: translateY(-3px);
+  }
+  .theme-btn i {
+    font-size: 1.4rem;
+    color: var(--color-grey-2);
+    pointer-events: none;
+  }
+
+/* Home */
+#home {
+    background-image: url(../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Resume */
+.eduexp {
+    position: relative;
+}
+
+.eduexp::before {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: rgba(var(--c-brand-rgb), 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.eduexp::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: var(--c-brand);
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
